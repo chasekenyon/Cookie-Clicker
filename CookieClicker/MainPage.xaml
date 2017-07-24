@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="CookieClicker.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CookieClicker"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Height="200" Width="200" Content="Tap Here" HorizontalAlignment="Center" Style="{StaticResource CircleButton}" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="{x:Bind CookieCount , Mode=OneWay}" VerticalAlignment="Top" Margin="0,122,0,0"/>
+        <Button x:Name="MultiplierCost" Content="{x:Bind MultCost , Mode=OneWay}" HorizontalAlignment="Center" Margin="155,496,154,112" VerticalAlignment="Center" Click="Mult_Click"/>
+        <TextBlock x:Name="Multiplier" HorizontalAlignment="Center" Margin="0,471,0,0" TextWrapping="Wrap" Text="{x:Bind Mult , Mode=OneWay}" VerticalAlignment="Top" Width="86" TextAlignment="Center"/>
+        <TextBlock x:Name="PerSecond" HorizontalAlignment="Center" Margin="0,147,0,0" TextWrapping="Wrap" Text="{x:Bind CPS , Mode=OneWay}" VerticalAlignment="Top"/>
+        <Button x:Name="Cursor" Content="{x:Bind CursorCost , Mode=OneWay}" HorizontalAlignment="Center" Margin="0,570,0,0" VerticalAlignment="Center" Click="Cursor_Click"/>
+    </Grid>
+</Page>
